@@ -1,0 +1,9 @@
+{
+  "venvPath": ".",
+  "venv": "venv",
+  "include": [
+    "backend",
+    "tests",
+    "test_plc.py"
+  ]
+}

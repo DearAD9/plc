@@ -1,0 +1,116 @@
+{
+  "description": "Siemens PLC Data Block Variable Configuration (Example DB Mapping)",
+  "variables": [
+    {
+      "name": "voltage",
+      "db": 1,
+      "byte": 0,
+      "type": "REAL",
+      "unit": "V",
+      "description": "Main bus supply voltage"
+    },
+    {
+      "name": "current",
+      "db": 1,
+      "byte": 4,
+      "type": "REAL",
+      "unit": "A",
+      "description": "Total line current consumption"
+    },
+    {
+      "name": "power",
+      "db": 1,
+      "byte": 8,
+      "type": "REAL",
+      "unit": "W",
+      "description": "Active power measurement"
+    },
+    {
+      "name": "frequency",
+      "db": 1,
+      "byte": 12,
+      "type": "REAL",
+      "unit": "Hz",
+      "description": "Grid electrical frequency"
+    },
+    {
+      "name": "motor_running",
+      "db": 1,
+      "byte": 16,
+      "bit": 0,
+      "type": "BOOL",
+      "description": "Drive motor run feedback"
+    },
+    {
+      "name": "alarm_active",
+      "db": 1,
+      "byte": 16,
+      "bit": 1,
+      "type": "BOOL",
+      "description": "General system warning/alarm status"
+    },
+    {
+      "name": "emergency_stop",
+      "db": 1,
+      "byte": 16,
+      "bit": 2,
+      "type": "BOOL",
+      "description": "Emergency stop button state (True = OK, False = Tripped)"
+    },
+    {
+      "name": "raw_sensor_counts",
+      "db": 1,
+      "byte": 18,
+      "type": "INT",
+      "scale": 0.1,
+      "offset": 0.0,
+      "unit": "°C",
+      "description": "Scaled temperature sensor raw input"
+    },
+    {
+      "name": "part_counter",
+      "db": 1,
+      "byte": 20,
+      "type": "DINT",
+      "unit": "parts",
+      "description": "Total produced units counter"
+    },
+    {
+      "name": "status_word",
+      "db": 1,
+      "byte": 24,
+      "type": "WORD",
+      "description": "Drive status register word"
+    },
+    {
+      "name": "system_fault_code",
+      "db": 1,
+      "byte": 26,
+      "type": "DWORD",
+      "description": "32-bit fault code bitmask"
+    },
+    {
+      "name": "machine_state_code",
+      "db": 1,
+      "byte": 30,
+      "type": "BYTE",
+      "description": "State machine operational state byte"
+    },
+    {
+      "name": "total_energy_kwh",
+      "db": 1,
+      "byte": 32,
+      "type": "LREAL",
+      "unit": "kWh",
+      "description": "Cumulative energy counter (64-bit float)"
+    },
+    {
+      "name": "recipe_name",
+      "db": 1,
+      "byte": 40,
+      "type": "STRING",
+      "string_max_length": 32,
+      "description": "Active production recipe identifier"
+    }
+  ]
+}
