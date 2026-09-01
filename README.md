@@ -364,3 +364,5 @@ Open http://localhost:5173
 
 Tabs: Dashboard / Variables / Charts / Settings
 Dashboard is read-only — never writes to the PLC.
+#   p l c  
+ 
